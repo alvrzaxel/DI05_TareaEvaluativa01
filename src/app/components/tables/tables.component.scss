@@ -1,0 +1,37 @@
+/* Contenedor de cada tabla, con espaciado interno */
+.divTabla{
+    padding: 20px;
+}
+
+/* Estilo general de la tabla */
+.mi-tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo para las celdas de encabezado y contenido */
+.mi-tabla th, .mi-tabla td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Fondo gris claro para los encabezados */
+.mi-tabla th {
+    background-color: #f2f2f2;
+}
+
+/* Alterna el color de fondo en las filas pares */
+.mi-tabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Cambia el color de fondo al pasar el ratón sobre una fila */
+.mi-tabla tr:hover {
+    background-color: #ddd;
+}
+
+/* Centra los títulos h2 */
+h2 {
+    text-align: center;
+}

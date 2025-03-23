@@ -1,0 +1,72 @@
+/* Estilo para h2 */
+h2 {
+  text-align: center;
+  padding-bottom: 3% 0% 2%;
+  margin-top: 0px;
+}
+
+/* Contenedor principal del gráfico de líneas */
+#contenedor-linechart {
+  width: 100%;
+  max-width: 950px;
+  height: 750px;
+  margin: auto;
+  text-align: center;
+  aspect-ratio: 16/9;
+}
+
+/* Estilo del canvas dentro del contenedor del gráfico */
+#contenedor-linechart canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Media query para pantallas con ancho máximo de 2560px */
+@media (max-width: 2560px) {
+  #contenedor-linechart {
+    max-width: 800px;
+    max-height: 600px;
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 1920px */
+@media (max-width: 1920px) {
+  #contenedor-linechart {
+    max-width: 750px;
+    max-height: 450px;
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 1440px */
+@media (max-width: 1440px) {
+  #contenedor-linechart {
+    max-width: 600px;
+    max-height: 380px;
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 1024px */
+@media (max-width: 1024px) {
+  #contenedor-linechart {
+    max-width: 750px;
+    max-height: 450px;
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 810px */
+@media (max-width: 810px) {
+  #contenedor-linechart {
+    max-width: 720px;
+    max-height: 420px;
+  }
+}
+
+/* Media query para pantallas con ancho máximo de 414px */
+@media (max-width: 414px) {
+  #contenedor-linechart {
+    max-width: 375px;
+    max-height: 300px;
+  }
+}

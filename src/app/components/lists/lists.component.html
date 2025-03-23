@@ -1,0 +1,13 @@
+<!-- Itera sobre 'dataList', aplicando el pipe 'tablePipe' con un límite de 10 elementos por grupo -->
+<div *ngFor="let li of dataList | tablePipe: 10; let i = index">
+
+  <!-- Crea una lista y añade la clase 'section' si la longitud de 'li' es menor o igual a 10 -->
+  <ul class="" [ngClass]="{'section': li.length <= 10}">
+
+    <!-- Muestra el título 'List' solo en la primera iteración -->
+    <h2 *ngIf="i === 0">List</h2>
+
+    <!-- Muestra los elementos de lista -->
+    <li *ngFor="let item of li">{{ item }}</li>
+  </ul>
+</div>

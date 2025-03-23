@@ -1,0 +1,27 @@
+<!-- Genera tablas según los datos, dividiendo en grupos de 10 filas -->
+<div *ngFor="let row of datosTabla | tablePipe: 10; let i = index">
+
+  <!-- Contenedor de cada tabla, con clase condicional si hay 10 o menos filas -->
+  <div class="divTabla" [ngClass]="{'section': row.length <= 10}">
+
+    <!-- Muestra el título 'Table' solo en la primera iteración -->
+    <h2 *ngIf="i === 0">Table</h2>
+
+    <!-- Tabla con los datos -->
+    <table class="mi-tabla">
+      <thead>
+        <tr>
+          <!-- Encabezado de la tabla a partir de las claves de la fila -->
+          <th *ngFor="let item of row[0] | keyvalue">{{ item.key }}</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Filas de la tabla a partir de los valores de cada fila -->
+        <tr *ngFor="let fila of row">
+          <td *ngFor="let item of fila | keyvalue">{{ item.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

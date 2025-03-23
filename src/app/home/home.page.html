@@ -1,20 +1,41 @@
+<!-- Cabecera del contenido -->
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <!-- Título de la página -->
+    <ion-title>Generación de informes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Botón para generar el informe en PDF -->
+  <ion-button (click)="createPDF()" fill="clear" class="button">
+    <ion-icon slot="start" name="add-outline"></ion-icon>
+    Create PDF
+  </ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Contenedor principal del contenido a exportar -->
+  <div #container>
+
+    <!-- Sección del encabezado -->
+    <div class="bodyHeader section">
+      <h1>Dashboard</h1>
+    </div>
+
+    <!-- Sección para las gráficas -->
+    <div class="charts-container section">
+      <app-bar-chart class="chart"></app-bar-chart>
+      <app-pie-chart class="chart"></app-pie-chart>
+      <app-line-chart class="chart"></app-line-chart>
+    </div>
+
+    <!-- Sección para las tablas -->
+    <app-tables [datosTabla]="dataTable"></app-tables>
+
+    <!-- Sección para la lista -->
+    <app-lists [dataList]="dataList"></app-lists>
+
+    <!-- Sección para las tablas -->
+    <app-tables [datosTabla]="dataTable"></app-tables>
+
   </div>
 </ion-content>
