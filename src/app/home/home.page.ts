@@ -31,8 +31,7 @@ export class HomePage {
     this.initData();
 
     // Llamada a la API
-    //this.llamadaAPI();
-
+    this.llamadaAPI();
   }
 
   // Método para llamar a la API una vez por cada categoría
@@ -205,12 +204,11 @@ export class HomePage {
     doc.text(`Página ${currentPage} de ${doc.getNumberOfPages()}`, (pageWidth / 2) - (rectPadding * 2), pageHeight - rectPadding, { baseline: 'bottom' });
   }
 
-
   // Método para incicializar los datos de la tabla y lista
   private initData() {
 
     // Rellena la tabla
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 6; i++) {
       this.dataTable.push(
         { nombre: 'Juan', apellido: 'garcia', pais: "españa", edad: 30 },
         { nombre: 'María', apellido: 'perez', pais: "portugal", edad: 25 },
@@ -237,7 +235,7 @@ export class HomePage {
     ];
 
     // Rellena el resto de las líneas en la lista
-    for (let i = 3; i <= 40; i++) {
+    for (let i = 3; i <= 50; i++) {
       this.dataList.push(`Esta será la línea ${i} de la lista, esta entra bien.`);
     }
   }

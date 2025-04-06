@@ -16,6 +16,8 @@ export class SplitImagePipePipe implements PipeTransform {
       return [image];
     }
 
+    //return [image];
+
     // Calcula la altura de cada parte
     const partHeight = Math.floor(canvasHeight / 3);
     const images: HTMLCanvasElement[] = [];
