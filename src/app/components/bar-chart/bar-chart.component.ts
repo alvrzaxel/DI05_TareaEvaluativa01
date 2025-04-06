@@ -152,11 +152,12 @@ export class BarChartComponent  implements OnInit {
     console.log("Chart actualizado");
   }
 
+  // Método al destruir el component
   ngOnDestroy() {
     if (this.datosSubscription) {
+      // Cancelamos la subscripción y evitamos fugas de memoria
       this.datosSubscription.unsubscribe();
     }
   }
-
-
+  
 }
